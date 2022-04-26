@@ -5,12 +5,13 @@ nav {
   justify-content: center;
   background: var(--color-white);
   position: fixed;
+  z-index: 9999;
 }
 .nav-center {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80%;
+  width: 85%;
 }
 .left {
   width: 40%;

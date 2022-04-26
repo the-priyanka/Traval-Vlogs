@@ -1,0 +1,65 @@
+.home {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.527),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url(../../assets/home.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0 115px;
+  padding-top: 115px;
+}
+.home .align-center {
+  height: inherit;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.home-head {
+  font-size: 5rem;
+  color: white;
+  font-weight: 700;
+}
+hr {
+  height: 2px;
+  color: white;
+  width: 68%;
+  margin: 0;
+}
+.home-para {
+  color: white;
+  font-size: 22px;
+  margin: 11px 0;
+  white-space: 2;
+  word-spacing: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1000px) {
+  .home {
+    margin: 0;
+  }
+  .home-head {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .home-head {
+    font-size: 3rem;
+  }
+  .home-para {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .home-head {
+    font-size: 2rem;
+  }
+  .home-para {
+    font-size: 14px;
+    font-weight: normal;
+  }
+}

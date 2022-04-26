@@ -35,7 +35,7 @@ const Nav = () => {
           })}
         </ul>
 
-        <div className="btn">
+        <div className="btn sidebar-toggle">
           <button className="sidebar-toggle" onClick={openSidebar}>
             <FaBars />
           </button>
