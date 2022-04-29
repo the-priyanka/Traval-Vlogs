@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { AppProvider } from "./context/context";
+import { VideoProvider } from "./context/videoContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <AppProvider>
-      <App />
+      <VideoProvider>
+        <App />
+      </VideoProvider>
     </AppProvider>
   </React.StrictMode>
 );

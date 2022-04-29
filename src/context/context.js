@@ -4,7 +4,6 @@ const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  console.log(isSidebarOpen);
   const [activeNav, setActiveNav] = useState("#");
 
   const openSidebar = () => {
@@ -18,6 +17,7 @@ const AppProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         isSidebarOpen,
+        setIsSidebarOpen,
         openSidebar,
         closeSidebar,
         activeNav,

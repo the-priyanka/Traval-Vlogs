@@ -1,0 +1,47 @@
+.social {
+  position: fixed;
+  top: 20%;
+  left: 7%;
+  background: var(--color-primary);
+  z-index: 99;
+}
+.social-icons {
+  width: auto;
+  padding: 11px 16px;
+  line-height: 2;
+}
+.social-icons li a {
+  color: var(--color-white);
+  font-size: 22px;
+}
+
+@media screen and (max-width: 1000px) {
+  .social {
+    left: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .contact-form,
+  .contact-info {
+    width: 100%;
+  }
+  .contact-info {
+    order: -1;
+    margin-bottom: 15px;
+  }
+  .social {
+    position: relative;
+    box-shadow: none;
+  }
+  .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 575px) {
+  .section-title h2,
+  .header .nav-inner ul li a {
+    font-size: 35px;
+  }
+}

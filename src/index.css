@@ -1,6 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Poppins:wght@500&family=Roboto:wght@300;500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Poppins:wght@500&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Poppins:wght@500&family=Roboto+Condensed:wght@300;400&family=Roboto:wght@100&display=swap");
+
 :root {
   --color-white: white;
-  --color-primary: #6f1dd3;
+  --color-white-gray: #e3e3e3e6;
+  --color-primary: #5217c7;
+  --color-dark-gray: rgb(206 208 210);
+  --color-para: rgb(85, 85, 85);
+  --color-pencil: #000000cf;
+  --color-skyblue: #beecff;
 }
 
 *,
@@ -14,7 +23,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
-  background: var(--clr-grey-10);
+  background: whitesmoke;
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -55,7 +64,18 @@ p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
 }
-
+main {
+  margin: 115px;
+}
+::placeholder {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+section {
+  min-height: 100vh;
+}
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -79,15 +99,14 @@ p {
     line-height: 1;
   }
 }
+#nav {
+  position: relative;
+}
 /*  global classes */
 /* section */
 .section {
   width: 90vw;
   margin: 0 auto;
-  max-width: var(--max-width);
-}
-section {
-  height: 100vh;
 }
 @media screen and (min-width: 992px) {
   .section {

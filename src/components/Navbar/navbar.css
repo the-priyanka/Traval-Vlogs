@@ -5,16 +5,16 @@ nav {
   justify-content: center;
   background: var(--color-white);
   position: fixed;
-  z-index: 9999;
+  z-index: 999;
 }
 .nav-center {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 85%;
+  width: 82%;
 }
 .left {
-  width: 40%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -22,24 +22,28 @@ nav {
 .logo {
   width: 110px;
 }
+.nav-right {
+  width: 70%;
+}
 .links {
   display: flex;
   align-items: center;
   justify-content: right;
-  width: 60%;
 }
 .links li {
   list-style: none;
-  width: 90px;
+  width: 100px;
 }
 .links a {
   text-decoration: none;
   font-size: 19px;
-  font-weight: bold;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
 }
 .links a.active {
   color: var(--color-primary);
   height: 30px;
+  font-weight: bold;
 }
 .links a {
   position: relative;
@@ -48,35 +52,89 @@ nav {
   content: "";
   position: absolute;
   left: 0;
-  top: 4px;
+  top: 8px;
   height: 100%;
   width: 0%;
   border-bottom: 3px solid var(--color-primary);
-  z-index: -1;
+  z-index: 1;
   transition: width 0.3s ease;
 }
 .links a:hover::before {
   width: 100%;
 }
 .sidebar-toggle {
-  font-size: 2rem;
+  font-size: 2.5rem;
   border: none;
   background: none;
   cursor: pointer;
+  transition: all 0.3s;
+  z-index: 999999;
 }
 
 .sidebar-toggle {
   display: none;
+  position: fixed;
+  right: 10%;
+  right: 4%;
+  top: 6%;
+}
+.sidebar-toggle-open {
+  position: fixed;
+  color: var(--color-primary);
+  right: 12%;
+  top: 14%;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
+  .nav-center {
+    width: 100%;
+  }
+  .nav-right {
+    display: flex;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    background: var(--color-skyblue);
+    height: 100vh;
+    transform: translate(100%);
+    align-items: center;
+    width: 78vw;
+    transition: transform 0.3s;
+  }
+  .show-nav-right {
+    display: flex;
+    background: var(--color-skyblue);
+    transform: translate(0);
+    box-shadow: 24px 9px 19pc 8pc;
+    width: 78vw;
+    transition: transform 0.3s;
+  }
   .links {
-    display: none;
+    flex-direction: column;
+    width: 100%;
+    z-index: 9999;
+    height: 90%;
+    justify-content: end;
+  }
+  .links li {
+    width: 74%;
+    text-align: end;
+    padding: 12px 0;
+  }
+  .links a {
+    font-size: 31px;
   }
   .sidebar-toggle {
     display: block;
   }
   .showSidebar {
     display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav-right {
+    width: 78vw;
   }
 }

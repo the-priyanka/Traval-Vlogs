@@ -6,8 +6,8 @@
     url(../../assets/home.jpg);
   background-attachment: fixed;
   background-size: cover;
+  height: 100vh;
   margin: 0 115px;
-  padding-top: 115px;
 }
 .home .align-center {
   height: inherit;
