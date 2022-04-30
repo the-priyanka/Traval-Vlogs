@@ -1,7 +1,7 @@
 import React from "react";
 import "./vlog.css";
 import { FaPlay, FaVolumeUp } from "react-icons/fa";
-import { BsPlayCircle } from "react-icons/bs";
+import { BsPlayCircle, BsSearch } from "react-icons/bs";
 import { MdOutlineFullscreen } from "react-icons/md";
 import { video } from "../../data";
 
@@ -74,7 +74,7 @@ const Vlog = () => {
             </div>
           </div>
         </div>
-        {/* <form className="search-form">
+        <form className="search-form">
           <button className="search-btn">
             <BsSearch />
           </button>
@@ -83,7 +83,7 @@ const Vlog = () => {
             id="search"
             placeholder="search video...."
           ></textarea>
-        </form> */}
+        </form>
 
         <div className="video-container">
           <ul>

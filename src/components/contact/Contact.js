@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useRef } from "react";
 import { social } from "../../data";
 import "./contact.css";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_z717v72",
+        "template_pxeqac5",
+        form.current,
+        "-rNI0WTd7bXK5HF4O"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <main className="contact-section sec-padding" id="contact">
       <div className="container">
@@ -13,10 +36,11 @@ const Contact = () => {
         </div>
         <div className="row">
           <div className="contact-form">
-            <form>
+            <form ref={form} onSubmit={sendEmail}>
               <div className="row">
                 <div className="input-group">
                   <input
+                    name="name"
                     type="text"
                     placeholder="Name"
                     className="input-control"
@@ -26,6 +50,7 @@ const Contact = () => {
                 <div className="input-group">
                   <input
                     type="text"
+                    name="email"
                     placeholder="Email"
                     className="input-control"
                     required
@@ -33,6 +58,7 @@ const Contact = () => {
                 </div>
                 <div className="input-group">
                   <input
+                    name="subject"
                     type="text"
                     placeholder="Subject"
                     className="input-control"
@@ -41,6 +67,7 @@ const Contact = () => {
                 </div>
                 <div className="input-group">
                   <textarea
+                    name="message"
                     placeholder="Message"
                     className="input-control"
                     required
