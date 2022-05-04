@@ -14,21 +14,14 @@ const VlogProvider = ({ children }) => {
   const [error, setError] = useState({ show: false, msg: "" });
   const [vlogs, setVlogs] = useState([]);
   const [query, setQuery] = useState("");
-  const [person, setPerson] = useState(null);
 
   const fetchVlogs = async (url) => {
     setIsLoading(true);
-    const response = await fetch(url);
-    const data = await response.json();
-    fetchVideos(data);
-    getVideo(data);
-  };
-
-  const fetchVideos = async (data) => {
     try {
+      const response = await fetch(url);
+      const data = await response.json();
       const { videos } = data;
-
-      if (videos) {
+      if (videos.length !== 0) {
         const newVlogs = videos.map((item) => {
           const { frameBorder, allowFullScreen, title, url, allow } =
             item;
@@ -41,8 +34,10 @@ const VlogProvider = ({ children }) => {
           };
         });
         setVlogs(newVlogs);
+        setError({ show: false, msg: "" });
       } else {
         setVlogs([]);
+        setError({ show: true, msg: "No Match here!" });
       }
       setIsLoading(false);
     } catch (error) {
@@ -50,26 +45,9 @@ const VlogProvider = ({ children }) => {
     }
   };
 
-  const getVideo = async (data) => {
-    const { videos } = data;
-    const video = videos[0];
-
-    const { frameBorder, allowFullScreen, title, url, allow } = video;
-    const newSingleVideo = {
-      frameBorder,
-      allowFullScreen,
-      title,
-      url,
-      allow,
-    };
-    setPerson(newSingleVideo);
-    setIsLoading(false);
-  };
-
   useEffect(() => {
-    fetchVlogs(url);
-  }, []);
-
+    fetchVlogs(`${url}${query}`);
+  }, [query]);
   return (
     <AppContext.Provider
       value={{
@@ -78,8 +56,6 @@ const VlogProvider = ({ children }) => {
         vlogs,
         query,
         setQuery,
-        getVideo,
-        person,
       }}
     >
       {children}

@@ -25,20 +25,21 @@
 .search-form:focus {
   background-color: brown;
 }
-.search-form textarea {
+.search-form input {
   width: calc(100% - 82px);
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
   background: none;
-  padding: 14px 0 0 10px;
+  padding: 16px 10px;
   z-index: 99;
   outline: none;
   resize: none;
+  height: auto;
 }
 
-textarea:focus {
+input:focus {
   background: var(--color-dark-gray);
 }
 
@@ -179,9 +180,8 @@ textarea:focus {
   }
 
   .video-container ul {
-    width: auto;
+    width: 100%;
     overflow-x: auto;
-    overflow-x: overlay;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -195,7 +195,7 @@ textarea:focus {
     min-height: 48%;
     min-width: 306px;
   }
-  .search-form textarea {
+  .search-form input {
     width: 100%;
   }
   .search-form {

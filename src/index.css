@@ -76,6 +76,19 @@ main {
 section {
   min-height: auto;
 }
+.error {
+  width: 100%;
+  font-weight: 700;
+}
+.error img {
+  width: 20%;
+}
+.error h3 {
+  font-size: 23px;
+  font-weight: 700;
+  color: var(--color-pencil);
+}
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
