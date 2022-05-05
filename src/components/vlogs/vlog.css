@@ -1,58 +1,56 @@
 .vlog-head {
   text-align: center;
   padding: 60px 0;
-  font-family: "Barlow Condensed", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
 }
 
 .vlog {
   min-height: auto;
-  background-color: #e3e3e3;
-  font-family: Helvetica, sans-serif;
+  background: var(--color-secondary);
   margin: 0 115px;
   text-align: center;
 }
 
 /* Search form */
 .search-form {
-  width: 100%;
+  width: 91%;
   display: flex;
-  align-items: center;
-  justify-content: end;
-  height: 10vh;
-}
-.search-form:focus {
-  background-color: brown;
+  align-items: start;
+  justify-content: start;
+  height: 6vh;
+  background: none;
+  border: 2px solid var(--color-primary);
+  border-radius: 6px;
+  color: white;
+  margin: 16px 0;
 }
 .search-form input {
-  width: calc(100% - 82px);
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
   background: none;
-  padding: 16px 10px;
+  padding: 5px 10px;
   z-index: 99;
   outline: none;
   resize: none;
-  height: auto;
-}
-
-input:focus {
-  background: var(--color-dark-gray);
+  height: 100%;
 }
 
 .search-btn {
-  width: 40px;
+  width: 7%;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  font-size: 17px;
+  font-size: 20px;
+  font-weight: 700;
   border: none;
   background: none;
   cursor: pointer;
+  color: var(--color-primary);
 }
 .video-container {
   width: 85%;
@@ -63,8 +61,7 @@ input:focus {
   text-align: center;
   margin: auto;
 }
-.fullScreen,
-.recVlog {
+.fullScreen {
   display: grid;
   align-items: center;
   width: 100%;
@@ -95,7 +92,6 @@ input:focus {
   cursor: pointer;
   background: var(--color-primary);
   color: var(--color-white);
-  font-family: "Roboto", sans-serif;
   font-weight: 600;
   transition: all 0.3s;
 }

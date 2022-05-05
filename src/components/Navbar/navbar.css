@@ -3,7 +3,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-white);
+  background: var(--color-secondary);
   position: fixed;
   z-index: 999;
 }
@@ -35,9 +35,9 @@ nav {
   width: 100px;
 }
 .links a {
+  color: var(--color-gray);
   text-decoration: none;
   font-size: 19px;
-  font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
 }
 .links a.active {
@@ -69,18 +69,17 @@ nav {
   cursor: pointer;
   transition: all 0.3s;
   z-index: 999999;
-}
-
-.sidebar-toggle {
   display: none;
   position: fixed;
   right: 10%;
   right: 4%;
   top: 6%;
+  color: var(--color-black);
 }
+
 .sidebar-toggle-open {
   position: fixed;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   right: 12%;
   top: 14%;
 }
@@ -95,7 +94,7 @@ nav {
     right: 0;
     bottom: 0;
     z-index: 99999;
-    background: var(--color-skyblue);
+    background: var(--color-secondary);
     height: 100vh;
     transform: translate(100%);
     align-items: center;
@@ -104,11 +103,12 @@ nav {
   }
   .show-nav-right {
     display: flex;
-    background: var(--color-skyblue);
+    background: var(--color-primary);
     transform: translate(0);
-    box-shadow: 24px 9px 19pc 8pc;
+    box-shadow: 24px 9px 19pc 8pc black;
     width: 78vw;
     transition: transform 0.3s;
+    color: var(--color-white);
   }
   .links {
     flex-direction: column;
@@ -124,6 +124,12 @@ nav {
   }
   .links a {
     font-size: 31px;
+  }
+  .links a.active {
+    color: var(--color-secondary);
+  }
+  .links a::before {
+    border-bottom: 3px solid var(--color-secondary);
   }
   .sidebar-toggle {
     display: block;

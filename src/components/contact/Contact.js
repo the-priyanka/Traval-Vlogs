@@ -1,29 +1,21 @@
-import React, { useRef } from "react";
+import React from "react";
 import { social } from "../../data";
 import "./contact.css";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
-  const form = useRef();
-
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_z717v72",
-        "template_pxeqac5",
-        form.current,
-        "-rNI0WTd7bXK5HF4O"
+        "service_ualv7ad",
+        "template_elaym4n",
+        e.target,
+        "aL5ULp7irASKMkzpl"
       )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -36,7 +28,7 @@ const Contact = () => {
         </div>
         <div className="row">
           <div className="contact-form">
-            <form ref={form} onSubmit={sendEmail}>
+            <form onSubmit={sendEmail}>
               <div className="row">
                 <div className="input-group">
                   <input
@@ -50,7 +42,7 @@ const Contact = () => {
                 <div className="input-group">
                   <input
                     type="text"
-                    name="email"
+                    name="user_email"
                     placeholder="Email"
                     className="input-control"
                     required
@@ -83,10 +75,6 @@ const Contact = () => {
             <div className="contact-info-item">
               <h3>Email</h3>
               <p>jdmenaria0018@gmail.com</p>
-            </div>
-            <div className="contact-info-item">
-              <h3>Phone</h3>
-              <p>91 99 **** ****</p>
             </div>
 
             <div className="contact-info-item">

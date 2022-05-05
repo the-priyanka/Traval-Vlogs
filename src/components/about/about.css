@@ -13,16 +13,14 @@
   width: 70%;
 }
 .about-container .left .about-content h1 {
-  font-family: "Roboto Condensed", sans-serif;
   font-weight: 600;
   word-spacing: 4px;
   font-size: 45px;
   line-height: 1.2;
   width: 80%;
-  color: var(--color-pencil);
+  color: var(--color-black);
 }
 .about-container .left .about-content p {
-  font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
   word-spacing: 3px;
   font-size: 16px;
@@ -40,12 +38,11 @@
   cursor: pointer;
   background: var(--color-primary);
   color: var(--color-white);
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
   transition: all 0.3s;
 }
 .about-btn a:hover {
-  background: var(--color-pencil);
+  background: var(--color-black);
 }
 .about-container .right {
   width: 50%;

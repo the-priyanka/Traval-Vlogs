@@ -1,6 +1,7 @@
 import "./App.css";
 import About from "./pages/AboutPage";
 import Contact from "./pages/ContactPage";
+import Footer from "./pages/FooterPage";
 import Home from "./pages/HomePage";
 // import Life from "./pages/LifePage";
 import Navbar from "./pages/NavbarPage";
@@ -13,10 +14,11 @@ function App() {
       <Navbar />
       <SocialIcons />
       <Home />
-      <Vlog />
       <About />
+      <Vlog />
       {/* <Life /> */}
       <Contact />
+      <Footer />
     </>
   );
 }

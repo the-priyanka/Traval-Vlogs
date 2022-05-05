@@ -1,15 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Poppins:wght@500&family=Roboto:wght@300;500;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Poppins:wght@500&family=Roboto:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Poppins:wght@500&family=Roboto+Condensed:wght@300;400&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap");
 
 :root {
   --color-white: white;
-  --color-white-gray: #e3e3e3e6;
   --color-primary: #5217c7;
-  --color-dark-gray: rgb(206 208 210);
   --color-para: rgb(85, 85, 85);
-  --color-pencil: #000000cf;
-  --color-skyblue: #beecff;
+  --color-black: #000000cf;
+  --color-secondary: #eae4f7;
 }
 
 *,
@@ -20,13 +16,11 @@
   box-sizing: border-box;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
-  background: whitesmoke;
+  background: var(--color-secondary);
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
+  font-family: "Source Sans Pro", sans-serif;
 }
 html {
   scroll-behavior: smooth;
@@ -43,10 +37,10 @@ h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
+  color: var(--color-black);
 }
 h1 {
   font-size: 3rem;
@@ -62,7 +56,7 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
+  color: var(--color-para);
 }
 main {
   margin: 115px;
@@ -70,8 +64,8 @@ main {
 ::placeholder {
   text-transform: capitalize;
   font-weight: bold;
-  font-family: "Poppins", sans-serif;
   font-weight: 400;
+  color: var(--color-black);
 }
 section {
   min-height: auto;

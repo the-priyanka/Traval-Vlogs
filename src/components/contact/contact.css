@@ -5,6 +5,7 @@
 .row {
   display: flex;
   flex-wrap: wrap;
+  color: var(--color-white);
 }
 .section-title {
   padding: 0 15px;
@@ -15,6 +16,7 @@
 .section-title h2 {
   font-size: 40px;
   text-transform: capitalize;
+  color: var(--color-white);
 }
 .slider {
   background: var(--color-primary);
@@ -93,6 +95,10 @@ main {
   margin: 0 0 30px;
   padding: 0 0 0 20px;
 }
+.contact-info-item h3,
+.contact-info-item p {
+  color: var(--color-white);
+}
 .contact-info-item .social-links a {
   display: inline-flex;
   align-items: center;
@@ -120,7 +126,6 @@ main {
   cursor: pointer;
   background: var(--color-primary);
   color: var(--color-white);
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
   transition: all 0.3s;
 }
