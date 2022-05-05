@@ -134,8 +134,6 @@ main {
 }
 
 /* Responsive */
-@media (max-width: 991px) {
-}
 @media (max-width: 767px) {
   .contact-info {
     order: -1;

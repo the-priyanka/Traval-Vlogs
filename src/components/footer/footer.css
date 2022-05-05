@@ -8,3 +8,8 @@ footer {
 footer span {
   font-size: 20px;
 }
+@media (max-width: 575px) {
+  footer span {
+    font-size: 12px;
+  }
+}
