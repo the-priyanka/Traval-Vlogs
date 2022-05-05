@@ -6,7 +6,6 @@ import emailjs from "emailjs-com";
 const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_ualv7ad",
@@ -17,6 +16,8 @@ const Contact = () => {
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
+
+  const handleSubmit = () => {};
 
   return (
     <main className="contact-section sec-padding" id="contact">
@@ -62,7 +63,6 @@ const Contact = () => {
                     name="message"
                     placeholder="Message"
                     className="input-control"
-                    required
                   ></textarea>
                 </div>
                 <div className="contact-btn">
