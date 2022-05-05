@@ -105,7 +105,7 @@ nav {
     display: flex;
     background: var(--color-primary);
     transform: translate(0);
-    box-shadow: 24px 9px 19pc 8pc black;
+    box-shadow: 24px 9px 19pc 5pc black;
     width: 78vw;
     transition: transform 0.3s;
     color: var(--color-white);
