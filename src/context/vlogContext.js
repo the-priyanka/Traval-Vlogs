@@ -23,14 +23,21 @@ const VlogProvider = ({ children }) => {
       const { videos } = data;
       if (videos.length !== 0) {
         const newVlogs = videos.map((item) => {
-          const { frameBorder, allowFullScreen, title, url, allow } =
-            item;
+          const {
+            frameBorder,
+            allowFullScreen,
+            title,
+            url,
+            allow,
+            category,
+          } = item;
           return {
             frameBorder,
             allowFullScreen,
             title,
             url,
             allow,
+            category,
           };
         });
         setVlogs(newVlogs);
@@ -45,6 +52,11 @@ const VlogProvider = ({ children }) => {
     }
   };
 
+  const allCategories = [
+    "all",
+    ...new Set(vlogs.map((item) => item.category)),
+  ];
+
   useEffect(() => {
     fetchVlogs(`${url}${query}`);
   }, [query]);
@@ -56,6 +68,7 @@ const VlogProvider = ({ children }) => {
         vlogs,
         query,
         setQuery,
+        allCategories,
       }}
     >
       {children}

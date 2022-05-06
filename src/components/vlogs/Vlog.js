@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./vlog.css";
 import SearchForm from "./SearchForm";
 import { useVlogContext } from "../../context/vlogContext";
+import Categories from "./Categories";
+import Videos from "./Videos";
 
 const Vlog = () => {
-  const { isLoading, vlogs } = useVlogContext();
+  const { isLoading, vlogs, allCategories } = useVlogContext();
+  const [menuItems, setMenuItems] = useState(vlogs);
+  const [categories, setCategories] = useState(allCategories);
+  const [activeCategory, setActiveCategory] = useState("all");
 
-  const filterVolgs = vlogs.slice(0, 6);
+  useEffect(() => {
+    setMenuItems(vlogs);
+    setCategories(allCategories);
+    setActiveCategory("all");
+  }, [vlogs, allCategories]);
+
+  const filterItems = (category) => {
+    if (category === "all") {
+      setMenuItems(vlogs);
+      return;
+    }
+    const newItems = vlogs.filter(
+      (item) => item.category === category
+    );
+    setMenuItems(newItems);
+  };
 
   return (
     <>
@@ -14,31 +34,16 @@ const Vlog = () => {
       <div className="vlog">
         <div className="video-container">
           <SearchForm />
+          <Categories
+            filterItems={filterItems}
+            categories={categories}
+            activeCategory={activeCategory}
+            setActiveCategory={setActiveCategory}
+          />
           {isLoading ? (
             <div className="loading"></div>
           ) : (
-            <ul className="fullScreen">
-              {filterVolgs.map((vlog, index) => {
-                const {
-                  url,
-                  title,
-                  frameBorder,
-                  allow,
-                  allowFullScreen,
-                } = vlog;
-                return (
-                  <li key={index}>
-                    <iframe
-                      src={url}
-                      title={title}
-                      frameBorder={frameBorder}
-                      allow={allow}
-                      allowFullScreen={allowFullScreen}
-                    ></iframe>
-                  </li>
-                );
-              })}
-            </ul>
+            <Videos items={menuItems} />
           )}
           <div className="more-video">
             <a

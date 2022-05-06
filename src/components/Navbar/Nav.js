@@ -1,6 +1,5 @@
 import React from "react";
 import "../Navbar/navbar.css";
-import { FaBars } from "react-icons/fa";
 import { links } from "../../data";
 import { useGlobalContext } from "../../context/context";
 
@@ -21,6 +20,7 @@ const Nav = () => {
       <ul className="links">
         {links.map((link) => {
           const { id, url, text } = link;
+          console.log(url);
           return (
             <li key={id}>
               <a
