@@ -1,5 +1,5 @@
 import React from "react";
-import { BsSearch } from "react-icons/bs";
+import { FaSearch } from "react-icons/fa";
 import { useVlogContext } from "../../context/vlogContext";
 import Not_found from "../../assets/not_found.png";
 
@@ -12,7 +12,7 @@ const SearchForm = () => {
         onSubmit={(e) => e.preventDefault()}
       >
         <button className="search-btn">
-          <BsSearch />
+          <FaSearch />
         </button>
         <input
           name="search"

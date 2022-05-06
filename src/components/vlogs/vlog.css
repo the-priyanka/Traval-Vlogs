@@ -18,7 +18,7 @@
   display: flex;
   align-items: start;
   justify-content: start;
-  height: 6vh;
+  height: 7vh;
   background: none;
   border: 2px solid var(--color-primary);
   border-radius: 6px;
@@ -239,8 +239,9 @@
     height: 6vh;
   }
   .search-btn {
-    width: 24px;
+    width: 37px;
     font-size: 13px;
+    font-weight: bold;
   }
   .video-container {
     width: 100%;

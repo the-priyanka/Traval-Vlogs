@@ -124,13 +124,14 @@ main {
   padding: 13px 18px;
   text-transform: capitalize;
   cursor: pointer;
-  background: var(--color-primary);
-  color: var(--color-white);
+  background: var(--color-secondary);
+  color: var(--color-primary);
   font-weight: 400;
   transition: all 0.3s;
 }
 .contact-btn button:hover {
-  background: var(--color-pencil);
+  background: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 /* Responsive */
@@ -141,6 +142,10 @@ main {
   }
   .contact-info-item {
     padding: 0;
+  }
+  .contact-btn button {
+    font-size: 12px;
+    padding: 10px 10px;
   }
 }
 @media (max-width: 575px) {
