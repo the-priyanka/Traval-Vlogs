@@ -9,7 +9,10 @@ footer span {
   font-size: 20px;
 }
 @media (max-width: 575px) {
+  footer {
+    height: 8vh;
+  }
   footer span {
-    font-size: 12px;
+    font-size: 13px;
   }
 }

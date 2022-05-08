@@ -56,12 +56,13 @@
 /* category */
 .btn-container {
   margin-bottom: 1rem;
-  display: grid;
+  display: flex;
   align-items: center;
   width: 100%;
   grid-template-columns: repeat(auto-fill, minmax(279px, 4fr));
   height: auto;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .filter-btn {
   display: inline-block;
