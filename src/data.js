@@ -1,31 +1,37 @@
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
 import {
-  BsSnapchat,
   BsInstagram,
-  BsTwitter,
   BsYoutube,
+  BsCameraVideo,
 } from "react-icons/bs";
+import { AiOutlineHome } from "react-icons/ai";
+import { GiSelfLove } from "react-icons/gi";
+import { RiContactsLine } from "react-icons/ri";
 export const links = [
   {
     id: 1,
     url: "#",
     text: "home",
+    icon: <AiOutlineHome />,
   },
   {
     id: 2,
     url: "#about",
     text: "my story",
+    icon: <GiSelfLove />,
   },
   {
     id: 3,
     url: "#vlog",
     text: "my vlogs",
+    icon: <BsCameraVideo />,
   },
   {
     id: 5,
     url: "#contact",
     text: "follow me",
+    icon: <RiContactsLine />,
   },
 ];
 

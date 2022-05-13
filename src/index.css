@@ -144,10 +144,11 @@ Loading
   .section {
     width: 95vw;
   }
-
+}
+@media screen and (max-width: 992px) {
   .loading {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     margin: auto;
   }
 }
