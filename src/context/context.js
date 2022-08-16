@@ -13,6 +13,11 @@ const AppProvider = ({ children }) => {
     setIsSidebarOpen(false);
   };
 
+  const handleLinks = (url) => {
+    setActiveNav(url);
+    setIsSidebarOpen(false);
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -22,6 +27,7 @@ const AppProvider = ({ children }) => {
         closeSidebar,
         activeNav,
         setActiveNav,
+        handleLinks,
       }}
     >
       {children}

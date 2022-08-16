@@ -4,15 +4,20 @@
   left: 7%;
   background: var(--color-primary);
   z-index: 99;
+  border: 2px solid var(--color-secondary);
 }
 .social-icons {
   width: auto;
-  padding: 11px 16px;
+  padding: 11px 11px;
   line-height: 2;
 }
 .social-icons li a {
   color: var(--color-white);
+  width: 100%;
   font-size: 22px;
+}
+.social-icons li a:hover {
+  color: var(--color-secondary);
 }
 
 @media screen and (max-width: 1000px) {

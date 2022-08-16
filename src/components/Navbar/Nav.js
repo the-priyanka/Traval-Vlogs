@@ -4,13 +4,9 @@ import { links } from "../../data";
 import { useGlobalContext } from "../../context/context";
 
 const Nav = () => {
-  const { activeNav, setActiveNav, isSidebarOpen, setIsSidebarOpen } =
+  const { activeNav, isSidebarOpen, handleLinks } =
     useGlobalContext();
 
-  const handleLinks = (url) => {
-    setActiveNav(url);
-    setIsSidebarOpen(false);
-  };
   return (
     <div
       className={
@@ -20,7 +16,6 @@ const Nav = () => {
       <ul className="links">
         {links.map((link) => {
           const { id, url, text } = link;
-          console.log(url);
           return (
             <li key={id}>
               <a
