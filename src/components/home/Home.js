@@ -7,7 +7,7 @@ const Home = () => {
       <div className="align-center">
         <h1 className="home-head">TravelPreneur NJ</h1>
         <hr />
-        <p className="home-para">Vlogging About Travel & My Life!</p>
+        <p className="home-para">Zindagi Na Milegi dubara!</p>
       </div>
     </div>
   );

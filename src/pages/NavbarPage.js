@@ -12,9 +12,9 @@ const Navbar = () => {
         <div className="nav-center">
           <div className="left">
             <a
-              href="#"
+              href="# "
               onClick={() => handleLinks("#")}
-              className={activeNav === `#` ? "active linkA" : "linkA"}
+              className={activeNav === "#" ? "active linkA" : "linkA"}
             >
               <img src={logo} alt="logo" className="logo" />
             </a>

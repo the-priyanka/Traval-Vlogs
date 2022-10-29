@@ -16,6 +16,7 @@ const Nav = () => {
       <ul className="links">
         {links.map((link) => {
           const { id, url, text } = link;
+          console.log(url);
           return (
             <li key={id}>
               <a

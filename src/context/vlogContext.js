@@ -21,7 +21,6 @@ const VlogProvider = ({ children }) => {
       const response = await fetch(url);
       const data = await response.json();
       const { vlogVideos: videos } = data;
-      console.log(videos);
       if (videos.length !== 0) {
         const newVlogs = videos.map((item) => {
           const {
