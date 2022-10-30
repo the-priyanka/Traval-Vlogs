@@ -4,7 +4,7 @@ const Videos = ({ items }) => {
   const sliceItems = items.slice(0, 6);
   return (
     <ul className="fullScreen">
-      {sliceItems.map((vlog, index) => {
+      {items.map((vlog, index) => {
         const { url, title, frameBorder, allow, allowFullScreen } =
           vlog;
         return (
