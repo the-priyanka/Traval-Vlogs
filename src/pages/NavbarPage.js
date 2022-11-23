@@ -3,6 +3,7 @@ import "../components/Navbar/navbar.css";
 import logo from "../assets/logo.png";
 import Burger from "../components/Navbar/Burger";
 import { useGlobalContext } from "../context/context";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { activeNav, handleLinks } = useGlobalContext();
@@ -11,13 +12,13 @@ const Navbar = () => {
       <nav>
         <div className="nav-center">
           <div className="left">
-            <a
-              href="# "
-              onClick={() => handleLinks("#")}
-              className={activeNav === "#" ? "active linkA" : "linkA"}
+            <Link
+              to="/"
+              onClick={() => handleLinks("/")}
+              className={activeNav === "/" ? "active linkA" : "linkA"}
             >
               <img src={logo} alt="logo" className="logo" />
-            </a>
+            </Link>
           </div>
           <Burger />
         </div>

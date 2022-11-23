@@ -2,6 +2,7 @@ import React from "react";
 import "../Navbar/navbar.css";
 import { links } from "../../data";
 import { useGlobalContext } from "../../context/context";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const { activeNav, isSidebarOpen, handleLinks } =
@@ -16,18 +17,17 @@ const Nav = () => {
       <ul className="links">
         {links.map((link) => {
           const { id, url, text } = link;
-          console.log(url);
           return (
             <li key={id}>
-              <a
-                href={url}
+              <Link
+                to={url}
                 onClick={() => handleLinks(url)}
                 className={
                   activeNav === `${url}` ? "active linkA" : "linkA"
                 }
               >
                 {text}
-              </a>
+              </Link>
             </li>
           );
         })}

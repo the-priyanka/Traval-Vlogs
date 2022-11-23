@@ -11,25 +11,19 @@ import { RiContactsLine } from "react-icons/ri";
 export const links = [
   {
     id: 1,
-    url: "#",
+    url: "/",
     text: "home",
     icon: <AiOutlineHome />,
   },
   {
-    id: 2,
-    url: "#about",
-    text: "my story",
-    icon: <GiSelfLove />,
-  },
-  {
     id: 3,
-    url: "#vlog",
+    url: "/vlog",
     text: "my vlogs",
     icon: <BsCameraVideo />,
   },
   {
     id: 5,
-    url: "#contact",
+    url: "/contact",
     text: "follow me",
     icon: <RiContactsLine />,
   },
