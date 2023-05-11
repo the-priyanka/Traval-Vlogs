@@ -3,7 +3,7 @@ import "./about.css";
 
 const About = () => {
   return (
-    <main>
+    <main className="mainAbout">
       <div className="about-container">
         <div className="left">
           <div className="about-content">
@@ -18,7 +18,7 @@ const About = () => {
               web-series in Hindi with full of travel tips and tricks,
               especially for budget travel. My dream is to inspire
               people to explore this beautiful world and learn the
-              best things to make our world a better place to live in.{" "}
+              best things to make our world a better place to live in.
             </p>
             <div className="about-btn">
               <a href="#contact">follow me</a>

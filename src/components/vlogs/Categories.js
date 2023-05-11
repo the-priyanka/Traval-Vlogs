@@ -10,6 +10,10 @@ const Categories = ({
     filterItems(category);
     setActiveCategory(category);
   };
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   return (
     <div className="btn-container">
       {categories.map((category, index) => {
@@ -24,7 +28,7 @@ const Categories = ({
             key={index}
             onClick={() => handleLinks(category)}
           >
-            {category}
+            {capitalizeFirstLetter(category)}
           </button>
         );
       })}

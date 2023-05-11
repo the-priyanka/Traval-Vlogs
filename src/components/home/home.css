@@ -7,7 +7,7 @@
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
-  margin: 0 115px;
+  margin: 0;
 }
 .home .align-center {
   height: inherit;
@@ -36,11 +36,12 @@ hr {
   word-spacing: 4px;
   font-weight: 500;
 }
-
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 1500px) {
   .home {
-    margin: 0;
+    margin: 0 115px;
   }
+}
+@media screen and (max-width: 1000px) {
   .home-head {
     font-size: 3.5rem;
   }

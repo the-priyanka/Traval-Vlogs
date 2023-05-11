@@ -1,7 +1,8 @@
 .social {
   position: fixed;
   top: 20%;
-  left: 7%;
+
+  left: 0;
   background: var(--color-primary);
   z-index: 99;
   border: 2px solid var(--color-secondary);
@@ -20,9 +21,9 @@
   color: var(--color-secondary);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 1500px) {
   .social {
-    left: 0;
+    left: 7%;
   }
 }
 @media screen and (max-width: 800px) {

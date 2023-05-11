@@ -10,13 +10,13 @@ const url = `${process.env.REACT_APP_VLOG_API_KEY}`;
 const AppContext = createContext();
 
 const VlogProvider = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState({ show: false, msg: "" });
   const [vlogs, setVlogs] = useState([]);
   const [query, setQuery] = useState("");
 
   const fetchVlogs = async (url) => {
-    setIsLoading(true);
+    // setIsLoading(true);
     try {
       const response = await fetch(url);
       const data = await response.json();
@@ -46,7 +46,7 @@ const VlogProvider = ({ children }) => {
         setVlogs([]);
         setError({ show: true, msg: "No Match here!" });
       }
-      setIsLoading(false);
+      // setIsLoading(false);
     } catch (error) {
       console.log(error);
     }

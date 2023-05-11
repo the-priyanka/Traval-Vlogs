@@ -42,6 +42,11 @@ const Vlog = () => {
           />
           {isLoading ? (
             <div className="loading"></div>
+          ) : menuItems.length === 0 ? (
+            <p style={{ margin: "0 10px" }}>
+              Sorry there is no video. Please Click On 'For More
+              Videos' Button And Get All Videos On Youtube!
+            </p>
           ) : (
             <Videos items={menuItems} />
           )}

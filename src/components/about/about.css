@@ -48,20 +48,30 @@
   width: 50%;
 }
 .about-container .right .about-img {
-  background: url("../../assets/me.jpeg");
+  background: url("../../assets/aboutme.jpg");
   background-attachment: fixed;
-  background-position: 155px 29%;
+  background-position: 280px 39%;
   background-repeat: no-repeat;
   background-size: cover;
   height: 90vh;
-  width: 100%;
+  width: auto;
   border-left: 18px solid var(--color-primary);
 }
 
-@media screen and (max-width: 1000px) {
-  main {
-    margin: 115px 0;
+main {
+  margin: 115px 0;
+}
+
+@media screen and (min-width: 1500px) {
+  .about-container .right .about-img {
+    background-position: 400px 50%;
   }
+  main {
+    margin: 115px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
   .about-container .left .about-content h1 {
     font-size: 36px;
     width: 100%;
@@ -70,7 +80,7 @@
     font-size: 15px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .about-container {
     display: block;
   }
